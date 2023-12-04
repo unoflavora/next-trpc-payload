@@ -1,0 +1,35 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "esbuild src/index.ts --bundle --platform=node --loader:.node=file --outfile=dist/index.js --external:express --external:cors",
+    "start": "node dist/index.js",
+    "type-check": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "esbuild": "^0.19.8",
+    "tsx": "^4.6.2",
+    "types": "workspace:^",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@payloadcms/bundler-webpack": "^1.0.5",
+    "@payloadcms/db-postgres": "^0.2.0",
+    "@payloadcms/richtext-slate": "^1.2.1",
+    "@trpc/server": "^10.44.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "payload": "^2.3.1",
+    "superjson": "^2.2.1",
+    "zod": "^3.22.4"
+  }
+}
